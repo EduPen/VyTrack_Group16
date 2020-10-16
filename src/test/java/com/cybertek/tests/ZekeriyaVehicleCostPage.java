@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class testWithDDF extends TestBase {
+public class ZekeriyaVehicleCostPage extends TestBase {
 
     @DataProvider
     public Object[][] userData() {
