@@ -81,7 +81,8 @@ hello
         //edit and push
     }
 
-    @Test
+
+
     public void resetFuelLogtset() {
         VehicleFuelPage vehicleFuelPage = new VehicleFuelPage();
         List<WebElement> listOfGrid = driver.findElements(By.xpath("//tr[@class='grid-header-row']/th/a"));
@@ -94,6 +95,7 @@ hello
         }
         System.out.println("expected = " + expected);
 
+
         vehicleFuelPage.gridSettings.click();
         Actions actions = new Actions(driver);
         actions.clickAndHold(vehicleFuelPage.VendorGrid).moveToElement(vehicleFuelPage.idGrid).release(vehicleFuelPage.idGrid).perform();
@@ -101,6 +103,7 @@ hello
         vehicleFuelPage.reset.click();
 
         List<WebElement> listOfGrid2 = driver.findElements(By.xpath("//tr[@class='grid-header-row']/th/a"));
+
         String actual = "";
         for (WebElement newlist : listOfGrid2) {
 
@@ -110,40 +113,11 @@ hello
         System.out.println("actual=" + actual);
         Assert.assertEquals(actual, expected, "verify grid reset");
 
-        //edit and push
-    }
-
-    @Test
-    public void resetFuelLogtset() {
-        VehicleFuelPage vehicleFuelPage = new VehicleFuelPage();
-        List<WebElement> listOfGrid = driver.findElements(By.xpath("//tr[@class='grid-header-row']/th/a"));
-
-        String expected = "";
-        for (WebElement list : listOfGrid) {
-
-            expected += list.getText() + ",";
-
-        }
-        System.out.println("expected = " + expected);
-
-        vehicleFuelPage.gridSettings.click();
-        Actions actions = new Actions(driver);
-        actions.clickAndHold(vehicleFuelPage.VendorGrid).moveToElement(vehicleFuelPage.idGrid).release(vehicleFuelPage.idGrid).perform();
-        vehicleFuelPage.closeGridSetting.click();
-        vehicleFuelPage.reset.click();
-
-        List<WebElement> listOfGrid2 = driver.findElements(By.xpath("//tr[@class='grid-header-row']/th/a"));
-        String actual = "";
-        for (WebElement newlist : listOfGrid2) {
-
-            actual += newlist.getText() + ",";
-
-        }
-        System.out.println("actual=" + actual);
-        Assert.assertEquals(actual, expected, "verify grid reset");
 
         //edit and push
     }
+
+
 
 }
 

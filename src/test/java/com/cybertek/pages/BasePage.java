@@ -106,6 +106,8 @@ public abstract class BasePage {
         } catch (Exception e) {
             BrowserUtils.clickWithTimeOut(Driver.get().findElement(By.xpath(moduleLocator)),  5);
 
+
+
         }
     }
 
