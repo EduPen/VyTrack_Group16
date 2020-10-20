@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class testWithDDF extends TestBase {
+public class testWithDDFmustafa extends TestBase {
 
     @DataProvider
     public Object[][] userData() {
