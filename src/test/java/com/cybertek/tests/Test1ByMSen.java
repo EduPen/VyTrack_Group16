@@ -36,7 +36,7 @@ driver password=UserUser123
 hello
      */
 
-    @Test
+
     public void cancelFuelLog() {
         VehicleFuelPage vehicleFuelPage = new VehicleFuelPage();
         String actualResult = vehicleFuelPage.totalRecords.getText();
@@ -78,6 +78,8 @@ hello
         System.out.println("actual="+actual);
         Assert.assertEquals(actual,expected, "verify grid reset");
 
-
+        //edit and push
     }
+
+
 }
