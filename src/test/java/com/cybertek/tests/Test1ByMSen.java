@@ -54,13 +54,13 @@ hello
         VehicleFuelPage vehicleFuelPage = new VehicleFuelPage();
         List<WebElement> listOfGrid = driver.findElements(By.xpath("//tr[@class='grid-header-row']/th/a"));
 
-        String expected="";
+        String expected = "";
         for (WebElement list : listOfGrid) {
 
-            expected+=list.getText()+",";
+            expected += list.getText() + ",";
 
         }
-        System.out.println("expected = "+expected);
+        System.out.println("expected = " + expected);
 
         vehicleFuelPage.gridSettings.click();
         Actions actions = new Actions(driver);
@@ -69,14 +69,14 @@ hello
         vehicleFuelPage.reset.click();
 
         List<WebElement> listOfGrid2 = driver.findElements(By.xpath("//tr[@class='grid-header-row']/th/a"));
-        String actual="";
+        String actual = "";
         for (WebElement newlist : listOfGrid2) {
 
-            actual+=newlist.getText()+",";
+            actual += newlist.getText() + ",";
 
         }
-        System.out.println("actual="+actual);
-        Assert.assertEquals(actual,expected, "verify grid reset");
+        System.out.println("actual=" + actual);
+        Assert.assertEquals(actual, expected, "verify grid reset");
 
         //edit and push
     }
