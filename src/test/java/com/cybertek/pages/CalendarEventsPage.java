@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class CalendarEventsPage extends BasePage {
 
 
@@ -58,6 +60,10 @@ public class CalendarEventsPage extends BasePage {
     @FindBy(xpath = "(//*[contains(text(),'No')])[6]")
     public WebElement callViaHangout;
 
+    @FindBy(xpath = "//table/tbody/tr")
+    public List<WebElement> rows;
+    @FindBy(xpath = "//i[@class='fa-chevron-right hide-text']")
+    public  WebElement next;
     public WebElement getNumberOfRows() {
         return numberOfRows;
     }
