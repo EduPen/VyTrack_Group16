@@ -19,7 +19,7 @@ public class ZekeriyaVehicleCostPage extends TestBase {
     @DataProvider
     public Object[][] userData() {
 
-        ExcelUtil qa3short = new ExcelUtil("src/test/resources/Vytracktestdata.xlsx", "QA2-short");
+        ExcelUtil qa3short = new ExcelUtil("src/test/resources/Vytracktestdata.xlsx", "zekeriya");
 
         String[][] dataArray = qa3short.getDataArrayWithoutFirstRow();
 
