@@ -13,4 +13,7 @@ public class FleetPage extends BasePage{
     }
     @FindBy(className = "title title-level-1")
     public WebElement fleetPage;
+
+    @FindBy(xpath = "(//div[@class='message'])[2]")
+    public WebElement warningmessagetoStoreManager;
 }
