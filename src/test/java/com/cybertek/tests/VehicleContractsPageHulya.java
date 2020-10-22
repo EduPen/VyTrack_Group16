@@ -35,6 +35,8 @@ public class VehicleContractsPageHulya extends TestBase {
 
         Assert.assertEquals(actualTitle,expectedTitle,"verify equals");
 
+        //
+
 
 
 
